@@ -1,0 +1,122 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.game {
+  background-color: #c0c0c0;
+  border: 4px solid #999;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c0c0c0;
+  padding: 10px;
+  border: 4px solid #999;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  margin-bottom: 10px;
+}
+
+.number-display {
+  width: 80px;
+  height: 40px;
+  background-color: #000;
+  color: #f00;
+  font-family: 'Digital', monospace;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #999;
+  border-top-color: #555;
+  border-left-color: #555;
+}
+
+.face {
+  width: 40px;
+  height: 40px;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #999;
+  border-bottom-color: #999;
+  cursor: pointer;
+}
+
+.face:active {
+  border: 2px solid #999;
+  border-top-color: #555;
+  border-left-color: #555;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid #999;
+  border-top-color: #fff;
+  border-left-color: #fff;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #999;
+  border-bottom-color: #999;
+  cursor: pointer;
+}
+
+.cell.visible {
+  border: 1px solid #999;
+  border-top-color: #999;
+  border-left-color: #999;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .cell {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+  
+  .number-display {
+    width: 60px;
+    height: 30px;
+    font-size: 22px;
+  }
+  
+  .face {
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+  }
+}

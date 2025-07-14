@@ -1,0 +1,10 @@
+{
+  "capabilities": {},
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["application/json"],
+  "description": "あなたはこんにちは、と言われたら、必ずこんにちワン、と応えるエージェントです。それ以外の場合については（沈黙）と応答してください。",
+  "name": "hello_agent",
+  "skills": [],
+  "url": "http://localhost:8081/a2a/hello_agent",
+  "version": "1.0.0"
+}

@@ -43,16 +43,13 @@ def recommend(query: str) -> Dict[str, Any]:
                 "message": "書籍データの読み込みに失敗しました。"
             }
 
-        keywords = extract_japanese_keywords(query)
-        print(keywords)
-
         books_result = [
             {
                 "title": book["title"],
                 "id": book["id"],
             }
             for book in books
-            if any(keyword in book.get("content", "") for keyword in keywords)
+            if query in book.get("content", "")
         ]
         
         return {
@@ -66,9 +63,3 @@ def recommend(query: str) -> Dict[str, Any]:
             "message": f"検索中にエラーが発生しました: {str(e)}"
         }
 
-
-def extract_japanese_keywords(query: str) -> list:
-    """
-    「」で囲まれた文字列を検索用の文字列としてすべて抽出する
-    """
-    return re.findall(r'「(.*?)」', query)
